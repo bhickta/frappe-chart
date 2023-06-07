@@ -1,0 +1,15 @@
+{
+  "name": "frappeChart",
+  "version": "1.0.0",
+  "description": "Frappe Chart Practice",
+  "author": "Nishant Bhickta <nishantbhickta@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "frappe-charts": "^1.6.2",
+    "nodemon": "^2.0.22"
+  }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chart Example</title>
+  <style>
+    #chart {
+      width: 18000px;
+      height: 18000px;
+    }
+  </style>
+</head>
+<body>
+  <div id="chart"></div>
+
+  <script type="module">
+    import { Chart } from "./f/frappe-charts.min.esm.js";
+
+    fetch('/chart-data')
+      .then(response => response.json())
+      .then(data => {
+        const chart = new Chart("#chart", {
+          title: "My Awesome Chart",
+          data: data,
+          type: 'bar', // or 'line', 'scatter', 'pie', 'percentage'
+          height: 750,
+          colors: ['#7cd6fd', '#743ee2']
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching chart data:', error);
+      });
+  </script>
+</body>
+</html>

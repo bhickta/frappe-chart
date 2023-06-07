@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: frappe
+    volumes:
+      - .:/bhickta/app
+    ports:
+      - "8080:8080"
